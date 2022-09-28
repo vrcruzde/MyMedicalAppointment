@@ -49,7 +49,7 @@ public class UIMenu {
 
             switch (response){
                 case 1:
-                    System.out.println(":: Book an appointment");// muestra lista de meses 3, que puede un apciente agendar
+                    System.out.println(":: Book an appointment");// muestra lista de meses 3, que puede un paciente agendar
                     for (int i = 1; i < 3; i++) {
                         System.out.println(i+". "+MONTHS[i]); // nos muestra de 3 en 3 los meses
                     }
