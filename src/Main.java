@@ -5,7 +5,7 @@ public class Main {
 
         //showMenu();
 
-        Doctor myDoctor = new Doctor("Victor Cruz","Cardiologo");
+        Doctor myDoctor = new Doctor("Victor Cruz","Cardiology");
         System.out.println(myDoctor.name);
         System.out.println(myDoctor.speciality);
 
