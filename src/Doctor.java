@@ -2,6 +2,7 @@ public class Doctor {
     //Atributos
     static int id = 0;  // debe ser autoincrementado por cada Doctor aumenta su valor y el primer valor cera O
     String name;
+    String email;
     String speciality;
 
     // Comportamientos
