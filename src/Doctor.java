@@ -13,7 +13,7 @@ public class Doctor {
     Doctor (String name, String speciality){
         System.out.println("El nombre del doctor asignado es"+ name);
         id++;
-        this.name = name;// hace referencia a todos los elementos que componen esa clase
+        this.name = name;// Hace referencia a todos los elementos que componen esa clase
         this.speciality = speciality;
     }
     public void showName(){
