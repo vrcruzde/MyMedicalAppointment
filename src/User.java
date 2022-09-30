@@ -47,9 +47,16 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.length()>8){
+        if (phoneNumber.length() > 8) {
             System.out.println("El numero telefonico debe tener 8 caracteres maximo");
-        }else if (phoneNumber.length() == 8){
+        } else if (phoneNumber.length() == 8) {
             this.phoneNumber = phoneNumber;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "User: "+ name + ", Email: "+email+
+                "\nAdress"+address+"  .Phone: "+phoneNumber;
     }
 }

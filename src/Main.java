@@ -16,13 +16,11 @@ public class Main {
             System.out.println(aA.getDate()+""+aA.getTime());
         }
 
-       /* Patient myPatient = new Patient("Alejandro Cruz","acruz@desarrollo.com");
-        myPatient.setWeight(72.3);
-        System.out.println(myPatient.getWeight());
+       Patient myPatient = new Patient("Alejandro Cruz","acruz@desarrollo.com");
+        System.out.println(myPatient);
 
-        myPatient.setPhoneNumber("12354697");
-        System.out.println(myPatient.getPhoneNumber());*/
+
+
     }
-
 
 }
