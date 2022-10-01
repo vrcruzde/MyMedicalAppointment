@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public abstract class User {
     int id;
     private String name;
     private String email;
@@ -61,4 +61,7 @@ public class User {
         return "model.User: "+ name + ", Email: "+email+
                 "\nAdress"+address+"  .Phone: "+phoneNumber;
     }
+
+    // se crea metodo abstract que me de informacion sobre los usuarios
+    public abstract void showDataUser();
 }

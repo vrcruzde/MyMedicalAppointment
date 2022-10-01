@@ -54,4 +54,10 @@ public class Patient extends User {
         return super.toString()+"\n Age:  "+birthday+"  Weight: "+getWeight()+
                                 "  Height:  "+ getHeight()+"  Blood: "+getBlood();
     }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente EPS Sanitas");
+        System.out.println("Historia Clinica");
+    }
 }

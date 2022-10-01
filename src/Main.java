@@ -1,5 +1,6 @@
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 import java.util.Date;
 
@@ -13,12 +14,16 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(),"5pm");
         myDoctor.addAvailableAppointment(new Date(),"5:30pm");
 
-        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
+
+        User user =new Doctor("Victor Cruz", "vruz@cle.com");
+        user.showDataUser();
+
+       /* for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate()+""+aA.getTime());
         }
-
-       Patient myPatient = new Patient("Alejandro Cruz","acruz@desarrollo.com");
-        System.out.println(myPatient);
+        */
+       User user1 = new Patient("Alejandro Cruz","acruz@Hos.com");
+        user1.showDataUser();
 
 
 
