@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,7 +9,7 @@ public class Doctor extends User {
 
     // Comportamientos
 
-      Doctor (String name, String email){
+    public Doctor (String name, String email){
         super(name, email);
         System.out.println("El nombre del doctor asignado es"+ name);
 
@@ -25,7 +27,7 @@ public class Doctor extends User {
         return availableAppointments;
     }
     public static class AvailableAppointment{
-        //Doctor define fechas en las que esta disponible
+        //model.Doctor define fechas en las que esta disponible
         private int id;
         private Date date; //fecha
         private String time;// hora

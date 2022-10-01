@@ -1,4 +1,8 @@
-public class Patient extends User{
+package model;
+
+import model.User;
+
+public class Patient extends User {
     // atributos
     private String birthday;
     private double weight;
@@ -7,7 +11,7 @@ public class Patient extends User{
 
     // constructor, se encarga de definir los parametros obligatorios
     //para que el objeto exista
-     Patient(String name, String email){
+     public Patient(String name, String email){
          super(name,email);
      }
 
