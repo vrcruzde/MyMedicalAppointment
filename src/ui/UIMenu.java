@@ -58,7 +58,7 @@ public class UIMenu {
         ArrayList<Patient>patients=new ArrayList<>();
         patients.add(new Patient("Deisy Imbachi", "dei@gmail.com"));
         patients.add(new Patient("Carlos Ponse","cpon@hotmail.com"));
-        patients.add(new Patient("Julian Roman","jr@gmaik.com"));
+        patients.add(new Patient("Julian Roman","jr@gmail.com"));
 
         boolean emailCorrect=false;// esta en false porque hasta el momento que haga la verificacion pasa a true
         do {
@@ -72,7 +72,7 @@ public class UIMenu {
                         emailCorrect=true;
                         //obtener el usuario logeado
                         doctorLogged=d;
-                        // showDoctorMenu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }

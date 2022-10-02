@@ -19,11 +19,13 @@ public class UIDoctorMenu {
             System.out.println("2. My Schedule appointment");
             System.out.println("0. Logout");
 
+            //leemos la respuesta
             Scanner sc=new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
 
             switch (response){
                 case 1:
+                    showAddAvailableAppointmentMenu();
                     break;
                 case 2:
                     break;
@@ -31,7 +33,7 @@ public class UIDoctorMenu {
                     UIMenu.showMenu();
                     break;
             }
-        }while (response!=0)
+        }while (response!=0);
     }
 
     private static void showAddAvailableAppointmentMenu(){
@@ -53,7 +55,7 @@ public class UIDoctorMenu {
             if(response > 0 && response < 4){
                 //1,2,3 las opciones que tenemos
                 int monthSelected = response;
-                System.out.println(monthSelected+"."+UIMenu.MONTHS[monthSelected]);
+                System.out.println(monthSelected+"."+UIMenu.MONTHS[monthSelected-1]);
 
                 System.out.println("Insert the date available: [dd/mm/yyyy]");
                 String date = sc.nextLine(); // sc.nexLine: para obtener los datos
