@@ -1,5 +1,7 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,7 +27,8 @@ public class Doctor extends User {
     //Coleccion de objetos
     //Cada vez que se agrege un nueva cita se estara acumulado en el array
     ArrayList<AvailableAppointment>availableAppointments = new ArrayList<>();
-    public void addAvailableAppointment(Date date, String time){ //metodo para disponibilidad de citas
+    public void addAvailableAppointment(String date, String time){ //metodo para disponibilidad de citas
+
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
     }
 
@@ -38,9 +41,14 @@ public class Doctor extends User {
         private int id;
         private Date date; //fecha
         private String time;// hora
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");// no ayuda a dar formato y trabajar con fechas
 
-        public AvailableAppointment(Date date,String time){
-            this.date = date;
+        public AvailableAppointment(String date,String time){
+            try {
+                this.date = format.parse(date);
+            } catch (ParseException e) {
+               e.printStackTrace();
+            }
             this.time = time;
         }
 
@@ -52,8 +60,11 @@ public class Doctor extends User {
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(){
             return date;
+        }
+        public String getDate(String DATE) {
+            return format.format(date);
         }
 
         public void setDate(Date date) {
