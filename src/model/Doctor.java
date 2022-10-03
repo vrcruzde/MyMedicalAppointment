@@ -8,13 +8,15 @@ import java.util.Date;
 public class Doctor extends User {
     //Atributos
     private  String speciality;
+    //Coleccion de objetos
+    //Cada vez que se agrege un nueva cita se estara acumulado en el array
+    private ArrayList<AvailableAppointment>availableAppointments = new ArrayList<>();
 
     // Comportamientos
 
     public Doctor (String name, String email){
         super(name, email);
-        System.out.println("El nombre del doctor asignado es:  "+ name);
-
+        
     }
 
     @Override
@@ -24,9 +26,7 @@ public class Doctor extends User {
 
     }
 
-    //Coleccion de objetos
-    //Cada vez que se agrege un nueva cita se estara acumulado en el array
-    ArrayList<AvailableAppointment>availableAppointments = new ArrayList<>();
+
     public void addAvailableAppointment(String date, String time){ //metodo para disponibilidad de citas
 
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
@@ -60,10 +60,10 @@ public class Doctor extends User {
             this.id = id;
         }
 
-        public Date getDate(){
+        public Date getDate(String DATE){
             return date;
         }
-        public String getDate(String DATE) {
+        public String getDate() {
             return format.format(date);
         }
 
